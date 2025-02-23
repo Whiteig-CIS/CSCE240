@@ -2,21 +2,21 @@
 // #include"project2functions.h"
 // header file for project2functions.cc
 
-#ifndef PROGRAM2FUNCTIONS_H // avoid redifining the things in the header file
+#ifndef PROGRAM2FUNCTIONS_H  // avoid redifining the things in the header file
 #define PROGRAM2FUNCTIONS_H
 
-bool IsSquare(int); // prototype for IsSquare
+bool IsSquare(int);  // prototype for IsSquare
 
-bool IsPerfect(int); // prototype for IsPerfect
+bool IsPerfect(int);  // prototype for IsPerfect
 
-bool IsVowel(char, bool = true); // prototype for IsVowel
+bool IsVowel(char, bool = true);  // prototype for IsVowel
 
-bool IsConsonant(char, bool = true); // prototype for IsConsonant
+bool IsConsonant(char, bool = true);  // prototype for IsConsonant
 
-int ToDigit(char); // prototype for ToDigit
+int ToDigit(char);  // prototype for ToDigit
 
-int Range(int&, int&); // prototype for range
+int Range(int&, int&);  // prototype for range
 
-int DigitInPosition(double, int); // prototype for DigitInPosition
+int DigitInPosition(double, int);  // prototype for DigitInPosition
 
-#endif // PROJECT2FUNCTIONS_H
+#endif  // PROJECT2FUNCTIONS_H

@@ -1,14 +1,47 @@
 // copyright 2025 Isaac White
 #include"ArrayFunctions.h"
 #include<iostream>
+#include<iomanip> // has cout, cin, and endl
+#include<cmath> // has the log function
+#include<cstdlib> // has ran function or randomizer
+#include<cctype>
 using std::cout;
 using std::endl;
 using std::cin;
 using std::swap;
-#include<iomanip> // has cout, cin, and endl
-#include<cmath> // has the log function
-#include<cstdlib> // has ran function or randomizer
+using std::setw;
+using std::toupper;
+void CapitolizeTheWords(char sentence[]) {
+    int i = 0;
+    while ( sentence[i] != '\0') {
+      sentence[i] = toupper(sentence[i]);
+      while ( sentence[i] != ' ' && sentence[i] != '\0')
+        ++i;
+        while ( sentence[i] == ' ' )
+         ++i;
+    }
+}
 
+void ColumnSums(const int a[][kCols], int num_rows, int sums[kCols]) {
+    sums[kCols] = 0;
+    for ( int i = 0; i < num_rows; ++i) { 
+      for ( int j = 0; j < kCols; ++j) {
+        sums[j] += a[i][j];
+      }
+    }
+    PrintArray(sums, kCols, 4);
+}
+  
+
+
+void PrintArray(const int a[][kCols], int num_rows, int field_width) {
+  for ( int i = 0; i < num_rows; ++i ) {
+    for ( int j = 0;  j < kCols; ++j ) // each dimension means another nestd loop. 3 demension = 3 for loops
+      cout << setw(field_width) << a[i][j];
+      cout << endl;
+  }
+ 
+}
 
 void  InsertionSort(int a[], int size){
     int start = clock();
@@ -22,8 +55,8 @@ void  InsertionSort(int a[], int size){
     cout << clock() - start << endl;
 }
 
-void PrintArray(const int a[], int n, int feildWidth){
-    if(  feildWidth == 0 ) { // if user didnt specify a feild width ie it is it's default value 0,
+void PrintArray(const int a[], int n, int feild_width){
+    if(  feild_width == 0 ) { // if user didnt specify a feild width ie it is it's default value 0,
                              // than go into this if statement to determine what the spacing should be
         int maxDigits = 1, digits;
         for ( int i = 0; i < n; ++i ) {
@@ -35,10 +68,10 @@ void PrintArray(const int a[], int n, int feildWidth){
               maxDigits = digits;
           }
         }
-        feildWidth = maxDigits + 2;
+        feild_width = maxDigits + 2;
     }
     for ( int i = 0; i < n; ++i)
-      cout << std::setw(feildWidth) << a[i]; // since the first parameter of the function is an address, the function CAN MODIFY the arrays values
+      cout << setw(feild_width) << a[i]; // since the first parameter of the function is an address, the function CAN MODIFY the arrays values
       cout << endl;
   }
   

@@ -3,12 +3,41 @@
 #include<cstdlib>
 #include<ctime>
 #include<iostream>
+#include<fstream> // file stream library
 using std::cin;
 using std::cout;
 using std::endl;
 using std::getline;
+using std::ifstream;
+using std::ofstream;
+
 int main() {
- 
+////////file io////////
+ofstream out_file("somefile.txt");
+int num;
+cout << "enter some ints to put in a file (enter -9999 to quit)";
+cin >> num;
+while ( num != -9999) {
+   out_file << num << endl;
+   cin >> num;
+}
+
+///////
+char next;
+ifstream in_file("ArrayFunctionTester.cc");
+next = in_file.get();
+  while ( in_file.good() ) {
+  //  in_file >> next; // reads without reading whitespace
+    cout << next;
+    next = in_file.get();
+  }
+return 0;
+
+
+
+
+
+ //////////////
  char my_cstring[6] ="abcde"; // = {'a', 'b', 'c', 'd', 'e'};
  for (int i = 0; i < 5; ++i) 
     cout << my_cstring[i];

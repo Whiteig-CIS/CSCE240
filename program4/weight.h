@@ -14,8 +14,8 @@ using std::string;
 // state.
 class Weight {
  private:
-  string units_;
   double value_;
+  string units_;
 
  public:
   // Add a constructor to allow the user to initialize the value and units, in

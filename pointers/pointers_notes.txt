@@ -1,0 +1,18 @@
+ - dynamic memory allocation 
+    //--"new" operator--//
+    - using the "new" operator, we can dynamically allocate memory and return the adress of the newly allocated
+        memory, or 0 if it can't reserve the request space.
+    - ex: 
+        char* ptr;
+        ptr = new char[ how_much ];
+    - anytime you use the "new" operator, make sure that the allocation was successful 
+        ie, the pointer != nullptr
+        
+    //--"delete" operator--//
+    - the "delete" operator frees up memory dynamically allocated memory.
+    - ex:
+        delete [] ptr;
+    - the programmer must remeber to free up dynamically allocated 
+        memory before reassigning the pointer. Or else youll get a memory leak.
+    
+    

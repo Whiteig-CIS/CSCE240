@@ -2,6 +2,14 @@
     "files.associations": {
         "tuple": "cpp",
         "ios": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "string": "cpp",
+        "__bit_reference": "cpp",
+        "bitset": "cpp",
+        "limits": "cpp",
+        "locale": "cpp",
+        "ratio": "cpp",
+        "__memory": "cpp",
+        "iostream": "cpp"
     }
 }
